@@ -33,7 +33,6 @@ function Aboutpreview() {
           className="relative"
         >
 
-          {/* red border accent */}
           <div className="absolute -inset-2 bg-brand-red/20 blur-xl rounded-[40px]"></div>
 
           <img
@@ -54,7 +53,6 @@ function Aboutpreview() {
           className="relative"
         >
 
-          {/* vertical red line */}
           <div className="absolute -left-6 top-2 w-1 h-28 bg-brand-red"></div>
 
           <motion.h2
@@ -79,13 +77,22 @@ function Aboutpreview() {
 
           <motion.p
             variants={item}
-            className="text-lg text-brand-gray leading-relaxed"
+            className="text-lg text-brand-gray leading-relaxed mb-8"
           >
             Couples searching for wedding photography are not just looking
             for someone with a fancy camera. Couples want storytellers with
-            a deep understanding of culture, emotions, and time. It's simple.
-            We are interested in what you feel, and not what you see.
+            a deep understanding of culture, emotions, and time.
           </motion.p>
+
+          {/* BUTTON */}
+          <motion.button
+            variants={item}
+            className="px-6 py-2 rounded-full border border-brand-gray bg-brand-card 
+            text-sm font-medium transition-all duration-300
+            hover:bg-brand-red hover:border-brand-red hover:shadow-lg"
+          >
+            About US
+          </motion.button>
 
         </motion.div>
 
