@@ -2,7 +2,7 @@ import heroImage from "../assets/images/hero2.jpg";
 
 function Hero() {
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative h-screen w-full overflow-hidden">
 
       {/* Background Image */}
       <img
@@ -11,28 +11,30 @@ function Hero() {
         className="absolute w-full h-full object-cover"
       />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-brand-dark"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
 
-        <h1 className="text-5xl md:text-6xl font-bold max-w-4xl">
-         Capturing Beautiful Wedding Stories
+        <h1 className="text-5xl md:text-6xl font-bold max-w-4xl leading-tight">
+          Capturing Beautiful <span className="text-brand-red">Wedding Stories</span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg">
+        <p className="mt-6 max-w-2xl text-lg text-brand-gray">
           We capture emotions, traditions and timeless memories so that
           your wedding story can be relived for generations.
         </p>
 
-        <div className="mt-8 flex gap-4">
+        <div className="mt-10 flex gap-4 flex-wrap justify-center">
 
-          <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
+          {/* Primary Button */}
+          <button className="bg-brand-red px-7 py-3 rounded-md font-semibold uppercase tracking-wide hover:bg-brand-redhover transition-all duration-300 shadow-lg">
             View Portfolio
           </button>
 
-          <button className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black">
+          {/* Secondary Button */}
+          <button className="border border-white px-7 py-3 rounded-md uppercase tracking-wide hover:bg-brand-red hover:border-brand-red transition-all duration-300">
             Contact Us
           </button>
 

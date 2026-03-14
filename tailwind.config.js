@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          red: "#FF2A2A",
+          redhover: "#D91B1B",
+          dark: "#0a0a0a",
+          card: "#141414",
+          gray: "#b0b0b0"
+        }
+      }
+    },
   },
   plugins: [],
 }
