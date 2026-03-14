@@ -32,26 +32,33 @@ function MomentsSection() {
   };
 
   return (
-    <section className="py-28 bg-gray-50 overflow-hidden">
+    <section className="py-28 bg-brand-dark text-white overflow-hidden relative">
+
+      {/* red glow background */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red/10 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-6 text-center">
 
-        <h2 className="text-4xl font-bold mb-10">
-          Best Wedding Photographer in Coimbatore, Couples Trust with Their Memories
+        <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight">
+          <span className="text-brand-red">Moments</span> That Matter
         </h2>
 
-        <div className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed space-y-5 mb-20">
+        <div className="max-w-3xl mx-auto text-brand-gray text-lg leading-relaxed space-y-5 mb-20">
 
           <p>
-            As the best wedding photographer in Coimbatore, we understand that weddings happen only once, but their memories last forever.
+            As one of the most trusted wedding photographers in Coimbatore,
+            we understand that weddings happen only once, but their memories
+            last forever.
           </p>
 
           <p>
-            Our approach to wedding photography captures emotions and moments so that they feel fresh even after many years.
+            Our approach to wedding photography captures emotions and
+            moments so that they feel fresh even after many years.
           </p>
 
           <p>
-            We highlight intimate details and spontaneous moments like the bride adjusting her saree or the groom's happy smile.
+            We highlight intimate details and spontaneous moments like
+            the bride adjusting her saree or the groom's joyful smile.
           </p>
 
         </div>
@@ -85,22 +92,24 @@ function MomentsSection() {
               <img
                 key={i}
                 src={img}
-                alt=""
-                className={`absolute w-[300px] h-[420px] object-cover rounded-xl shadow-xl transition-all duration-700 ${style}`}
+                alt="wedding moment"
+                className={`absolute w-[300px] h-[420px] object-cover rounded-2xl shadow-2xl border border-brand-card transition-all duration-700 hover:scale-105 ${style}`}
               />
             );
           })}
 
         </div>
 
-        <div className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed space-y-5 mt-20">
+        <div className="max-w-3xl mx-auto text-brand-gray text-lg leading-relaxed space-y-5 mt-20">
 
-          <p className="font-semibold text-gray-800 text-xl">
-            Moments You Lived Once, Memories You’ll Relive Always
+          <p className="font-semibold text-white text-xl">
+            Moments You Lived Once, Memories You'll Relive Always
           </p>
 
           <p>
-            The style we use is elegant, natural, and deeply emotive. No forced pose. No artificial drama. Beautifully preserved real love.
+            Our style is elegant, natural, and deeply emotive. No forced
+            poses. No artificial drama. Just beautifully preserved real
+            love stories captured forever.
           </p>
 
         </div>
