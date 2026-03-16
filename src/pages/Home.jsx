@@ -4,6 +4,7 @@ import Aboutpreview from "../components/Aboutpreview";
 import MomentsSection from "../components/MomentsSection";
 import PackagesSection from "../components/PackagesSection";
 import ComfortSection from "../components/ComfortSection";
+import ServiceSection from "../components/ServiceSection";
 
 function Home() {
   return (
@@ -14,6 +15,8 @@ function Home() {
       <MomentsSection />
       <PackagesSection />
       <ComfortSection />
+      <ServiceSection />
+    
     </>
   );
 }

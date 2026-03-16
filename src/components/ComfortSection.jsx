@@ -32,7 +32,8 @@ function ComfortSection() {
           </p>
 
           <p className="text-brand-gray text-lg leading-relaxed">
-            Your wedding album should reflect your personality.
+            Your wedding album should reflect your personality. Whether you're playful, traditionalist, modernist, or minimalistic. 
+            Thulir Media is a company that adapts to the style of each client.
           </p>
         </motion.div>
 
@@ -46,7 +47,7 @@ function ComfortSection() {
         >
 
           {/* decorative frame */}
-          <div className="absolute w-[420px] h-[320px] border-[16px] border-[#e7d7c6] rounded-sm"></div>
+          <div className="absolute w-[420px] h-[320px] border-[16px] border-[Red] rounded-sm"></div>
 
           {/* left image */}
           <motion.img
