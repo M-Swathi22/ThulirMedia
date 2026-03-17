@@ -43,14 +43,14 @@ function ServicesSection() {
 
   return (
 
-    <section className="py-24 bg-black text-white">
+    <section className="py-24 bg-brand-dark text-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
+        {/* Heading */}
         <h2 className="text-4xl font-bold text-center mb-16">
-          Our <span className="text-red-500">Services</span>
+          Our <span className="text-brand-red">Services</span>
         </h2>
-
 
         <Swiper
           slidesPerView={3}
@@ -67,14 +67,17 @@ function ServicesSection() {
           {services.map((service, index) => (
             <SwiperSlide key={index}>
 
-              <div className="bg-[#f2f5f5] text-black rounded-xl p-6 relative shadow-xl">
+              <div className="bg-[#111] border border-gray-800 rounded-xl p-6 relative shadow-2xl hover:-translate-y-2 hover:shadow-red-500/20 transition duration-300">
 
                 {/* PIN */}
-                <div className="absolute -top-4 left-10 w-4 h-4 bg-red-500 rounded-full shadow-lg"></div>
-                <div className="">
-                  <img src={pin} alt="Pin"
-                    className="relative h-10 top-7 -left-2 z-10" />
-                </div>
+                <div className="absolute -top-4 left-10 w-4 h-4 bg-brand-red rounded-full shadow-lg"></div>
+
+                <img
+                  src={pin}
+                  alt="Pin"
+                  className="absolute h-10 top-3 left-6 z-10"
+                />
+
                 {/* IMAGE */}
                 <div className="overflow-hidden rounded-lg transform -rotate-2 hover:rotate-0 transition duration-300">
 
@@ -87,16 +90,16 @@ function ServicesSection() {
                 </div>
 
                 {/* TEXT */}
-                <h3 className="text-xl font-semibold mt-5 mb-2">
+                <h3 className="text-xl font-semibold mt-5 mb-2 text-white">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-700 text-sm mb-4">
+                <p className="text-gray-400 text-sm mb-4">
                   {service.text}
                 </p>
 
                 {/* BUTTON */}
-                <button className="px-4 py-2 bg-red-500 text-white text-sm rounded hover:bg-red-600">
+                <button className="px-5 py-2 bg-brand-red text-white text-sm rounded-lg hover:bg-red-700 transition">
                   View Gallery
                 </button>
 
@@ -108,6 +111,7 @@ function ServicesSection() {
         </Swiper>
 
       </div>
+
     </section>
   );
 }

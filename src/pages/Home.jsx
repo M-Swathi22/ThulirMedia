@@ -5,6 +5,9 @@ import MomentsSection from "../components/MomentsSection";
 import PackagesSection from "../components/PackagesSection";
 import ComfortSection from "../components/ComfortSection";
 import ServiceSection from "../components/ServiceSection";
+import OurApproachSection from "../components/OurApproachSection";
+import CTASection from "../components/CTASection";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -16,7 +19,8 @@ function Home() {
       <PackagesSection />
       <ComfortSection />
       <ServiceSection />
-    
+      <OurApproachSection />
+      <CTASection />
     </>
   );
 }
