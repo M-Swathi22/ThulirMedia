@@ -14,7 +14,14 @@ export default {
           card: "#141414",
           gray: "#b0b0b0"
         }
-      }
+      },
+
+      // ✅ ADD THIS (don’t remove anything above)
+      fontFamily: {
+        heading: ["Playfair Display", "serif"],
+        body: ["Poppins", "sans-serif"],
+      },
+
     },
   },
   plugins: [],
