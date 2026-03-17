@@ -1,103 +1,93 @@
 import { motion } from "framer-motion";
 import storyImage from "../assets/images/aboutpreview.jpg";
 
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.25
-    }
-  }
-};
-
-const item = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8 } }
-};
-
 function Aboutpreview() {
   return (
-    <section className="py-28 bg-brand-dark text-white relative overflow-hidden">
+    <section className="relative py-28 bg-brand-dark text-white overflow-hidden">
 
-      {/* subtle red glow background */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-brand-red/10 blur-3xl"></div>
+      {/* background */}
+      <div className="absolute inset-0">
+        <div className="absolute w-full h-full bg-gradient-to-br from-black via-[#111] to-brand-dark"></div>
+        <div className="absolute w-full h-full bg-[linear-gradient(120deg,transparent_40%,rgba(255,42,42,0.08)_40%)]"></div>
+      </div>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center px-6">
+      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center px-6">
 
         {/* IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: -120, rotate: -4 }}
-          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="relative"
+          className="relative group"
         >
 
-          <div className="absolute -inset-2 bg-brand-red/20 blur-xl rounded-[40px]"></div>
+          {/* glow effect */}
+          <div className="absolute -inset-2 bg-brand-red/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
+          {/* image */}
           <img
             src={storyImage}
-            alt="wedding story"
-            className="relative rounded-[40px] object-cover shadow-2xl hover:scale-105 transition duration-700"
+            alt="wedding"
+            className="
+              relative w-full 
+              h-[300px] md:h-[400px]   /* 🔥 controlled height */
+              object-cover 
+              rounded-[20px] 
+              shadow-2xl
+
+              transition duration-700 ease-out
+
+              group-hover:scale-105 
+              group-hover:rotate-[0.5deg]
+              group-hover:brightness-110
+            "
           />
 
         </motion.div>
 
-
         {/* TEXT */}
         <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="relative"
+          className="max-w-xl"
         >
 
-          <div className="absolute -left-6 top-2 w-1 h-28 bg-brand-red"></div>
+          <p className="uppercase tracking-[6px] text-sm text-brand-gray mb-4">
+            Our Story
+          </p>
 
-          <motion.h2
-            variants={item}
-            className="text-4xl md:text-5xl font-bold mb-8 leading-tight"
-          >
+          <h2 className="font-heading text-4xl md:text-5xl font-semibold leading-[1.2] mb-6">
             Wedding Photography in{" "}
             <span className="text-brand-red">Coimbatore</span> that Preserves
             Your Love Forever
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            variants={item}
-            className="text-lg text-brand-gray leading-relaxed mb-6"
-          >
+          <p className="text-base md:text-lg text-brand-gray leading-relaxed mb-5">
             Weddings are more than just a celebration. They are events that
             last a lifetime. They include rituals and meaningful moments,
             like silent prayers or tears of joy. Thulir Media believes these
             memories should be preserved in an honest, beautiful, and
             profound way.
-          </motion.p>
+          </p>
 
-          <motion.p
-            variants={item}
-            className="text-lg text-brand-gray leading-relaxed mb-8"
-          >
+          <p className="text-base md:text-lg text-brand-gray leading-relaxed mb-8">
             Couples searching for wedding photography are not just looking
             for someone with a fancy camera. Couples want storytellers with
             a deep understanding of culture, emotions, and time.
-          </motion.p>
+          </p>
 
-          {/* BUTTON */}
-          <motion.button
-            variants={item}
-            className="px-6 py-2 rounded-full border border-brand-gray bg-brand-card 
-            text-sm font-medium transition-all duration-300
-            hover:bg-brand-red hover:border-brand-red hover:shadow-lg"
-          >
-            About US
-          </motion.button>
+          <button className="px-8 py-3 rounded-full bg-brand-red 
+          uppercase tracking-wide text-sm transition-all duration-300
+          hover:bg-brand-redhover hover:scale-105 shadow-lg">
+            About Us
+          </button>
 
         </motion.div>
 
       </div>
-
     </section>
   );
 }
